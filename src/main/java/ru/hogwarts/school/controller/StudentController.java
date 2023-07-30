@@ -38,8 +38,8 @@ public class StudentController {
     public Collection<Student> getAll(){
         return service.getAll();
     }
-    @GetMapping("/{filtered}")
-    public Collection<Student> getAllByAge(@RequestParam int age) {
+    @GetMapping("/filtered")
+    public Collection<Student> getAllByAge(@RequestParam("age") int age) {
         return service.getAllByAge(age);
     }
 }

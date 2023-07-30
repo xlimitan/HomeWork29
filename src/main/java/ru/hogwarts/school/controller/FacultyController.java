@@ -39,8 +39,8 @@ public class FacultyController {
         return service.getAll();
     }
 
-    @GetMapping("/{filtered}")
-    public Collection<Faculty> getAllByColor(@PathVariable("color") String color) {
+    @GetMapping("/color")
+    public Collection<Faculty> getAllByColor(@RequestParam("color") String color) {
         return service.getAllByColor(color);
     }
 }
